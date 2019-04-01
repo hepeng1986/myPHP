@@ -17,6 +17,7 @@ define('ROOT_PATH', dirname(APP_PATH).DS);
 define('LIB_PATH', ROOT_PATH.'library'.DS);
 define('CORE_PATH', LIB_PATH.'core'.DS);
 define('COMMON_PATH', APP_PATH.'common'.DS);
+define('VERDOR_PATH', ROOT_PATH.'vendor'.DS);
 
 //默认日志级别
 define('LOG_LEVEL',     2);

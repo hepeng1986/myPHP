@@ -16,7 +16,7 @@ return [
         'username'        => 'root',
         // 密码
         'password'        => 'root',
-        // 端口
+        // 端口 默认为3306
         'hostport'        => '3306',
         // 数据库编码,只能配置为utf8和gbk。默认采用utf8
         'charset'         => 'utf8',
