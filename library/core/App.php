@@ -4,6 +4,7 @@
  * User: dell
  * Date: 2019/4/2
  * Time: 9:57
+ * 静态类？
  */
 class App
 {
@@ -13,7 +14,7 @@ class App
     public function __construct ()
     {
         /* 错误异常注册 */
-        AppException::register();
+        AppException::init();
         /* 加载配置 */
         Config::init();
     }

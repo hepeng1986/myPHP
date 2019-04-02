@@ -12,6 +12,16 @@ class Config
      */
     private static $config = [];
     /**
+     * 初始化
+     * @return mixed
+     */
+    public static function init()
+    {
+        /* 加载两个文件 */
+        self::loadConfig("Config");
+        self::loadConfig("Database");
+    }
+    /**
      * 加载配置文件（PHP格式）
      * @access public
      * @param  string $file  配置文件名
