@@ -7,12 +7,12 @@
  */
 function autoload ($sClassName)
 {
-    $sFile = join(DS, explode('_', $sClassName)) . '.php';
+    $sFile = implode(DS, explode('_', $sClassName)) . '.php';
     $aDir = ["core","util","extend"];
     foreach ($aDir as $dk=>$dv){
         $sPath = LIB_PATH.$dv.DS;
         if (file_exists($sPath  . $sFile)) {
-            @require_once $sPath  . $sFile;
+            require_once $sPath  . $sFile;
             return true;
         }
     }
