@@ -8,21 +8,26 @@
  */
 class App
 {
+    protected $_dispatcher = null;
     /*
      * 构造函数
      */
-    public function __construct ()
+    public function __construct (){}
+    /*
+     * 应用程序
+     */
+    public static function run()
     {
+        self::initCommon();
+        $dispatcher = Yaf_Dispatcher::getInstance();
+        $dispatcher->dispatch();
+    }
+    public static function initCommon(){
         /* 错误异常注册 */
         AppException::init();
         /* 加载配置 */
         Config::init();
-    }
-    /*
-     * 应用程序
-     */
-    public function run()
-    {
-
+        //加载公共函数
+        G::Load();
     }
 }

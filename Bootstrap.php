@@ -28,5 +28,4 @@ define('LOG_SYS',     1);
 // 自动加载
 require CORE_PATH.'Loader.php';
 // 创建实例
-$app = new App();
-$app->run();
+App::run();
