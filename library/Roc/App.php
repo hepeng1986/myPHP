@@ -19,6 +19,7 @@ class App
     public static function run()
     {
         self::initCommon();
+        /* 路由执行 */
         $dispatcher = Yaf_Dispatcher::getInstance();
         $dispatcher->dispatch();
     }
